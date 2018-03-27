@@ -2,6 +2,7 @@ import os
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
+icon_sizes = [29, 58, 87, 40, 80, 60, 120, 180, 76, 152, 512, 1024]
 icon_names = ["Icon-Small.png",
               "Icon-Small@2x.png",
               "Icon-Small@3x.png",
