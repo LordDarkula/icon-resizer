@@ -14,5 +14,11 @@ icon_names = ["Icon-Small.png",
               "Icon-76.png",
               "Icon-76@2x.png",
               "iTunesArtwork.png",
-              "iTunesArtwork@2x.png",
-]
+              "iTunesArtwork@2x.png", ]
+icon_dict = dict(zip(icon_names, icon_sizes))
+
+tab_bar_dict = {
+    "-Bar": 23,
+    "-Bar@2x": 46,
+    "-Bar@3x": 69,
+}
