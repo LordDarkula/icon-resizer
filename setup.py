@@ -17,11 +17,10 @@ setup(
     long_description=read_md("README.md"),
     platforms='MacOS X, Windows, Linux',
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 2.7',
     ],
     author='Aubhro Sengupta',
     author_email='aubhrosengupta@gmail.com',
