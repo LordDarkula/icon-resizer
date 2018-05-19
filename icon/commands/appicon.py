@@ -23,15 +23,13 @@ def resize(raw, output: str):
     output = output or os.getcwd()
     if os.path.exists(raw):
         image = Image.open(raw)
-        names_and_images = dict([(name, resize(image, size))
-                                 for name, size in definitions.icon_dict.items()])
+        resized_dict = {name: image.resize((size, size), Image.ANTIALIAS)
+                        for name, size in definitions.icon_dict.items()}
         os.chdir(os.path.abspath(output))
         os.makedirs('output')
-        _save(os.getcwd(), names_and_images)
-
-
-def _resize(img, size: int):
-    return img.resize((size, size), Image.ANTIALIAS)
+        _save(os.getcwd(), resized_dict)
+    else:
+        click.echo("No image file found at {}. Please specify valid icon path.".format(raw))
 
 
 def _save(destination: str, image_dict: Dict):
