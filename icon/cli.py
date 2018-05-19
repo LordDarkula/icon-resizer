@@ -1,6 +1,7 @@
 import click
 
 from icon import __version__
+from icon.commands import appicon
 
 
 @click.group(invoke_without_command=True)
@@ -11,3 +12,6 @@ def main(ctx, version):
         click.echo(ctx.get_help())
     elif version:
         click.echo(__version__)
+
+
+main.add_command(appicon.appicon)
