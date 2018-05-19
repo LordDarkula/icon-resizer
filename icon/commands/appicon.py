@@ -1,6 +1,6 @@
 import os
 import click
-from typing import List, Tuple, Dict, Text
+from typing import Dict
 from PIL import Image
 
 import definitions
@@ -20,7 +20,7 @@ def appicon(ctx, version: bool):
 @click.option('--output', '-o', default=None, help="Specify output location")
 def resize(raw, output: str):
     """ Resize icon to Apple's required sizes """
-    output = output or definitions.PROJECT_ROOT
+    output = output or os.getcwd()
     if os.path.exists(raw):
         image = Image.open(raw)
         names_and_images = dict([(name, resize(image, size))
