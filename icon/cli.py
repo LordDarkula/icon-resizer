@@ -1,7 +1,7 @@
 import click
 
 from icon import __version__
-from icon.commands import appicon
+from icon.commands import appicon, tabbar
 
 
 @click.group(invoke_without_command=True)
@@ -15,3 +15,4 @@ def main(ctx, version):
 
 
 main.add_command(appicon.appicon)
+main.add_command(tabbar.tabbar)

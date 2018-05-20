@@ -1,9 +1,9 @@
 import os
 import click
-from typing import Dict
 from PIL import Image
 
 import definitions
+from icon.commands import helpers
 
 
 @click.group(invoke_without_command=True)
@@ -27,11 +27,6 @@ def resize(raw, output: str):
                         for name, size in definitions.icon_dict.items()}
         os.chdir(os.path.abspath(output))
         os.makedirs('output')
-        _save(os.getcwd(), resized_dict)
+        helpers.save_images(os.getcwd(), resized_dict)
     else:
         click.echo("No image file found at {}. Please specify valid icon path.".format(raw))
-
-
-def _save(destination: str, image_dict: Dict):
-    for name, image in image_dict.items():
-        image.save(os.path.join(destination, name))
