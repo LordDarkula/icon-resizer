@@ -24,7 +24,7 @@ setup(
     ],
     author='Aubhro Sengupta',
     author_email='aubhrosengupta@gmail.com',
-    url='https://github.com/LordDarkula/chess_py',
+    url='https://github.com/LordDarkula/icon-resizer',
     license='MIT',
     packages=find_packages(),
     include_package_data=True,
