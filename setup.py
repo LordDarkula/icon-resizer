@@ -27,6 +27,8 @@ setup(
     url='https://github.com/LordDarkula/icon-resizer',
     license='MIT',
     packages=find_packages(),
+    py_modules=['definitions'],
+    data_files=['LICENSE.txt', 'README.md'],
     include_package_data=True,
     install_requires=[
         'Click',
